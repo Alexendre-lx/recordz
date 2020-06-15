@@ -1,23 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Container, Row, Col} from 'react-bootstrap'
 import './App.css';
+import Nav from './frontPage/nav'
+import Home from './frontPage/frontpage'
+import Landing from './landingPage/landing'
+import Page from './mainpage'
+
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Alexendre OBLI
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/Alexendre-lx/recordz"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Le git
-        </a>
-      </header>
+        <Router>
+              <div>
+              <Nav/>
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/landing" component={Landing} />
+                    <Route path="/page" component={Page} />
+                </Switch>
+              </div>
+            </Router>
     </div>
   );
 }

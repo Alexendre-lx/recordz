@@ -1,0 +1,15 @@
+.landingContainer{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image :  url("https://cdn.pixabay.com/photo/2020/02/23/09/27/sound-4872773_960_720.jpg");
+  }
+
+
+.fill-window {
+  height: 95vh;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+}
